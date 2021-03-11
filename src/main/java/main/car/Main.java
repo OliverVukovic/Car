@@ -9,7 +9,7 @@ public class Main {
        audi.brand = "Audi";
        audi.model = "Q3";
        audi.color = "white";
-       //audi.buildYear = 2012;
+       //audi.BuildYear = 2012;
        
        System.out.println("Brand: " + audi.brand);
        System.out.println("Model: " + audi.model);

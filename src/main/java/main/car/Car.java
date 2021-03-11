@@ -4,25 +4,25 @@ public class Car {
     public String brand;
     public String model;
     public String color;
-    private int buildYar;
+    private int buildYear;
     
     public Car() {
         
     }
     
     public Car(int buildYear) {
-        this.buildYar = buildYear;
+        this.buildYear = buildYear;
     }
     
     public Car(String brand, String model, String color, int buildYear) {
         this.brand = brand;
         this.model = model;
         this.color = color;
-        this.buildYar = buildYear;
+        this.buildYear = buildYear;
     }
     
     public int getBuildYear() {
-        return this.buildYar;
+        return this.buildYear;
     }
     
     public void printAttributes() {
