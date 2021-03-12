@@ -11,12 +11,15 @@ public class Main {
        audi.model = "Q3";
        audi.color = "white";
        //audi.BuildYear = 2012;
-              
-       System.out.println("Brand: " + audi.brand);
-       System.out.println("Model: " + audi.model);
-       System.out.println("Color: " + audi.color);
-       System.out.println("Godina proizvodnje: " + audi.getBuildYear());
-        
+       audi.travel(150);       
+       // System.out.println("Brand: " + audi.brand);
+       // System.out.println("Model: " + audi.model);
+       // System.out.println("Color: " + audi.color);
+       // System.out.println("Godina proizvodnje: " + audi.getBuildYear());
+       audi.printAttributes();
+       //audi.fuelUp(30);
+       //audi.travel(300);
+       
         
        Car bmw = new Car();
        bmw.brand = "BMW";
@@ -26,10 +29,11 @@ public class Main {
        Car fiat = new Car(2010);
        System.out.println("Godina proizvodnje: " + fiat.getBuildYear());
    
-       Car lada = new Car("Lada", "Niva", "crvena", 2018, 0, 20, 5);
+       Car lada = new Car("Lada", "Niva", "crvena", 2018, 0, 50, 10);
        lada.printAttributes();
-       lada.travel(100);
-       //lada.steFuel(100);
+       lada.travel(300);
+       //lada.setFuel(343);
+       // proveriti gorivo
        lada.printAttributes();
               
     }
