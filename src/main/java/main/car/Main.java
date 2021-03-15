@@ -34,7 +34,7 @@ public class Main {
        Car fiat = new Car(2010);
        System.out.println("Godina proizvodnje: " + fiat.getBuildYear());
    
-       Car lada = new Car("Lada", "Niva", "red", 2018, 0, 50, 10, 70, 100);
+       Car lada = new Car("Lada", "Niva", "crvena", 2018, 0, 50, 10, 50, 100);
        lada.printAttributes();
        //lada.setFuel(343);
        // proveriti gorivo
