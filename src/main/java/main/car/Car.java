@@ -8,7 +8,9 @@ public class Car {
     private int mileage = 0;
     private int fuel;
     private int consumption = 5;
-    
+    public int fuelUp;
+    public int maxFuel = 100;
+        
     
     public Car() {
         this.brand = "";
@@ -21,7 +23,7 @@ public class Car {
         this.buildYear = buildYear;
     }
     
-    public Car(String brand, String model, String color, int buildYear, int mileage, int fuel, int consumption) {
+    public Car(String brand, String model, String color, int buildYear, int mileage, int fuel, int consumption, int fuelUp, int maxFuel) {
         this.brand = brand;
         this.model = model;
         this.color = color;
@@ -29,8 +31,11 @@ public class Car {
         this.mileage = mileage;
         this.fuel = fuel;
         this.consumption = consumption;
+        this.fuelUp = fuelUp;
+        this.maxFuel = maxFuel;
     }
-    
+
+      
     public int getBuildYear() {
         return this.buildYear;
     }
@@ -55,6 +60,23 @@ public class Car {
         this.fuel = fuel;
     }
     
+    private void setMaxFuel (int setFuel) {
+        this.maxFuel = maxFuel;
+    }
+    
+    public int getMaxFuel (int getFuel) {
+        return this.maxFuel = maxFuel;
+    }
+    
+    private void setFuelUp (int fuelUp) {
+        this.fuelUp = fuelUp;
+    }
+    
+    public int getFuelUp (int fuelUp) {
+        return this.fuelUp = fuelUp;
+    }
+    
+      
     public void printAttributes() {
         System.out.println("Brand: " + this.brand);
         System.out.println("Model: " + this.model);
@@ -68,7 +90,12 @@ public class Car {
     
     public void travel(int distance) {
         int fuelNeededForTrip = this.getConsumption() * distance / 100;
-        if (this.getFuel() > fuelNeededForTrip) {
+      
+       if (this.getFuelUp(fuelUp) > this.getMaxFuel(fuel)) {
+        System.out.println("Ne mozete nasuti kolicinu goriva vecu od rezervoara");
+    } else {
+            
+        if (this.getFuel() > fuelNeededForTrip + this.fuelUp) {
                     
         //int newMileage = this.getMileage() + distance;
         //this.setMileage(newMileage);
@@ -79,14 +106,10 @@ public class Car {
         //int newFuel = this.getFuel() - spentFuel;
         //this.setFuel(newFuel);
         
-            this.setFuel(this.getFuel() - fuelNeededForTrip);
-            System.out.println("Uspesno je predjen put od " + distance + " kilometara");
-        } else {
-            System.out.println("Nema dovoljno goriva za takav put!");
-        }
     }
+ 
     
-    // public fuelUp (int amounOfFuel)
-    // maxFuel (kapacitet rezervoara)
-}
+    }  
 
+    }
+}
