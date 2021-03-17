@@ -27,14 +27,14 @@ public class Main {
        bmw.brand = "BMW";
        bmw.model = "X5";
        bmw.color = "black";
-       //bmw.fuelUp = 30;
-       //bmw.maxFuel = 100;
+       //bmw.fuel = 30;
+       bmw.maxFuel = 100;
        bmw.printAttributes();
         
        Car fiat = new Car(2010);
        System.out.println("Godina proizvodnje: " + fiat.getBuildYear());
    
-       Car lada = new Car("Lada", "Niva", "crvena", 2018, 0, 50, 10, 50, 100);
+       Car lada = new Car("Lada", "Niva", "crvena", 2018, 0, 50, 10, 100);
        lada.printAttributes();
        //lada.setFuel(343);
        // proveriti gorivo
